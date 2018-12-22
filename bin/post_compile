@@ -1,2 +1,2 @@
 cd /tmp/ && curl https://codeload.github.com/gdelfresno/scrapyrt/tar.gz/pass-arguments-to-spider | tar xz
-cd pass-arguments-to-spider && python setup.py -q install
+cd scrapyrt-pass-arguments-to-spider && python setup.py -q install
