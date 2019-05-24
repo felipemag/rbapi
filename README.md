@@ -2,10 +2,6 @@
 
 A crawler made using Scrapy that access restricted area from my college and return grade data.
 
-## Deploy
-
-The project is ready to deploy
-
 ## Usage
 
 Make a JSON POST request to ```frb-api.herokuapp.com/crawl.json``` with these data:
