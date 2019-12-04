@@ -54,9 +54,9 @@ class RiobrancoSpider(scrapy.Spider):
         for row in mainTable[1:len(td)]:
             disc = row.css('td[class="{}"] div::text'.format(td[1])).extract_first()
             av1 = row.css('td[class="{}"] div::text'.format(td[2])).extract_first()
-            av2 = row.css('td[class="{}"] div::text'.format(td[3])).extract_first()
-            exame = row.css('td[class="{}"] div::text'.format(td[4])).extract_first() 
-            media = row.css('td[class="{}"] div::text'.format(td[5])).extract_first()
+            av2 = row.css('td[class="{}"] div::text'.format(td[3].split()[0])).extract_first()
+            exame = row.css('td[class="{}"] div::text'.format(td[4].split()[0])).extract_first() 
+            media = row.css('td[class="{}"] div::text'.format(td[5].split()[0])).extract_first()
             resultado = row.css('td[class="{}"] div::text'.format(td[6])).extract_first()
             print(disc)
             boletim = RbApiItem(disciplina=disc, av1=av1,av2=av2,exame=exame,media=media,resultado=resultado)
